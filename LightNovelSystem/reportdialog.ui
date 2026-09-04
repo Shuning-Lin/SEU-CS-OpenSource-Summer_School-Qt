@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReportDialog</class>
+ <widget class="QDialog" name="ReportDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>460</width>
+    <height>370</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>320</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>举报文章</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#ReportDialog {
+    background-color: #FAF8F8;
+    color: #2F3B46;
+    font-family: "Microsoft YaHei UI";
+    font-size: 10pt;
+}
+QLabel#labelArticleTitle {
+    color: #6F4246;
+    background-color: #FFF0F1;
+    border-left: 4px solid #C96B70;
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+QLabel#labelDetailCount {
+    color: #7D8D98;
+}
+QComboBox, QPlainTextEdit {
+    background-color: #FFFFFF;
+    color: #2F3B46;
+    border: 1px solid #DFCBCD;
+    border-radius: 7px;
+    padding: 7px 9px;
+    selection-background-color: #E5B8BB;
+}
+QComboBox:focus, QPlainTextEdit:focus {
+    border: 1px solid #C96B70;
+}
+QPushButton {
+    background-color: #C96B70;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 7px 16px;
+    min-height: 26px;
+}
+QPushButton:hover {
+    background-color: #B8585E;
+}
+QPushButton#btnCancel {
+    background-color: #E8ECEF;
+    color: #455A69;
+}
+QPushButton#btnCancel:hover {
+    background-color: #D8E0E5;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="labelArticleTitle">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="comboReason">
+     <item>
+      <property name="text">
+       <string>不良内容</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>不良内容1（出于演示的考虑，这里就不具体放出来了）</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>不良内容2（出于演示的考虑，这里就不具体放出来了）</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>其他</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPlainTextEdit" name="plainDetail">
+     <property name="placeholderText">
+      <string>可选，不超过 200 个字符</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelDetailCount">
+     <property name="text">
+      <string>0 / 200</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnSubmit">
+       <property name="text">
+        <string>提交举报</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnCancel">
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnSubmit</sender>
+   <signal>clicked()</signal>
+   <receiver>ReportDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>ReportDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

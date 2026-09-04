@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ArticleReadDialog</class>
+ <widget class="QDialog" name="ArticleReadDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>620</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>420</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>阅读文章</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#ArticleReadDialog {
+    background-color: #F5F9FC;
+    color: #2F3B46;
+    font-family: "Microsoft YaHei UI";
+    font-size: 10pt;
+}
+QLabel#labelTitle {
+    color: #2D5270;
+    background-color: #EAF3F9;
+    border-left: 4px solid #5F93BC;
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+QLabel#labelMeta {
+    color: #708493;
+    padding: 2px 6px;
+}
+QPlainTextEdit {
+    background-color: #FFFEFC;
+    color: #2E3A43;
+    border: 1px solid #D6E3EC;
+    border-radius: 8px;
+    padding: 12px;
+    selection-background-color: #BFD8EA;
+}
+QPushButton {
+    background-color: #4F86B7;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 7px 18px;
+    min-height: 26px;
+}
+QPushButton:hover {
+    background-color: #3F739F;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="labelTitle">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelMeta">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPlainTextEdit" name="plainContent">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnClose">
+       <property name="text">
+        <string>关闭</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnClose</sender>
+   <signal>clicked()</signal>
+   <receiver>ArticleReadDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

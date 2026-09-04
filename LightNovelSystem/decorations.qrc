@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/decor">
+        <file alias="system_header.png">assets/decor/system_header.png</file>
+        <file alias="mascot_trio.png">assets/decor/mascot_trio.png</file>
+    </qresource>
+</RCC>

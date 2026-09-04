@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginDialog</class>
+ <widget class="QDialog" name="LoginDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>479</width>
+    <height>310</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>380</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>登录 - 石蕗高中轻小说系统</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#LoginDialog {
+    background-color: #F5F9FC;
+    color: #2F3B46;
+    font-family: "Microsoft YaHei UI";
+    font-size: 10pt;
+}
+QLabel#labelSystemTitle {
+    color: #29465F;
+    background-color: rgba(255, 255, 255, 224);
+    border: 1px solid rgba(201, 220, 235, 210);
+    border-radius: 8px;
+    padding: 7px 10px;
+}
+QLineEdit {
+    background-color: rgba(255, 255, 255, 242);
+    color: #2F3B46;
+    border: 1px solid #C9DCEB;
+    border-radius: 7px;
+    padding: 6px 8px;
+    min-height: 25px;
+    selection-background-color: #8DB7D8;
+}
+QLineEdit:focus {
+    border: 1px solid #6D9FC7;
+}
+QCheckBox {
+    color: #526B7D;
+    spacing: 7px;
+}
+QPushButton {
+    background-color: #4F86B7;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 7px 15px;
+    min-height: 26px;
+}
+QPushButton:hover {
+    background-color: #3F739F;
+}
+QPushButton:pressed {
+    background-color: #345F84;
+}
+QPushButton#btnRegister {
+    background-color: #DFAE8F;
+}
+QPushButton#btnRegister:hover {
+    background-color: #CC9878;
+}
+QPushButton#btnExit {
+    background-color: #E5EDF3;
+    color: #42596C;
+}
+QPushButton#btnExit:hover {
+    background-color: #D4E1EA;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="loginHeroFrame">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#loginHeroFrame {
+    border-image: url(:/decor/system_header.png) 0 0 0 0 stretch stretch;
+    border-radius: 10px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::NoFrame</enum>
+     </property>
+     <layout class="QHBoxLayout" name="heroLayout">
+      <item>
+       <widget class="QLabel" name="labelSystemTitle">
+        <property name="maximumSize">
+         <size>
+          <width>220</width>
+          <height>55</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>石蕗高中轻小说系统</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="heroSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelAccount">
+       <property name="text">
+        <string>账号</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="editAccount">
+       <property name="placeholderText">
+        <string>学生请输入学号，管理员输入 admin</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelPassword">
+       <property name="text">
+        <string>密码</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="editPassword">
+       <property name="echoMode">
+        <enum>QLineEdit::EchoMode::Password</enum>
+       </property>
+       <property name="placeholderText">
+        <string>请输入密码</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="checkShowPassword">
+     <property name="text">
+      <string>显示密码</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="btnRegister">
+       <property name="text">
+        <string>学生注册</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnLogin">
+       <property name="text">
+        <string>登录</string>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnExit">
+       <property name="text">
+        <string>退出</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="decorations.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnLogin</sender>
+   <signal>clicked()</signal>
+   <receiver>LoginDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>386</x>
+     <y>282</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>395</x>
+     <y>4</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnExit</sender>
+   <signal>clicked()</signal>
+   <receiver>LoginDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>441</x>
+     <y>285</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>446</x>
+     <y>5</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
