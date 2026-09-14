@@ -488,12 +488,17 @@ void MainWindow::updateStatusBar()
         if (report.m_status == ReportStatus::Pending)
             ++pendingReports;
     }
-    statusBar()->showMessage(                   //到时候看看这个是刷在哪里的
+
+    bool flag=m_data.isAdmin(m_account);       //不管了，先实现功能再说（狗头）
+    if(flag)
+    {
+        statusBar()->showMessage(                   //到时候看看这个是刷在哪里的
         QStringLiteral("文章总数：%1  已公开：%2  待审核：%3  待处理举报：%4")
         .arg(m_data.articles().size())
         .arg(published)
         .arg(pendingArticles)
         .arg(pendingReports));
+    }
 }
 //统一刷新
 void MainWindow::refreshAllViews()

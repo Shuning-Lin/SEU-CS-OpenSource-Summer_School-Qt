@@ -2,6 +2,7 @@
 
 //服了，头文件真多。。。
 #include <QDir>
+#include <QCoreApplication>
 #include <QFile>
 #include <QFileInfo>
 #include <QJsonArray>
@@ -10,7 +11,6 @@
 #include <QRegularExpression>
 #include <QSaveFile>
 #include <QSet>
-#include <QStandardPaths>
 
 //这里也可以用老一辈的static写法
 namespace 
@@ -45,10 +45,10 @@ bool validReportStatusKey(const QString &key)    //检查举报是否出于一�
 
 NovelData::NovelData()
 {
-    QString directory=QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
-    if(directory.isEmpty())                                  //标准目录没有访问到（返回空串）
-        directory=QDir::current().filePath(QString("data")); //回退当前目录
-    m_filePath=QDir(directory).filePath(QStringLiteral("novel_data.json"));//目录+完整文件名=完整路径
+    // 提交版把数据保存在 exe 同目录，整个文件夹复制到其他电脑后仍可读写。
+    // 不依赖当前工作目录，双击程序或通过快捷方式启动时使用同一份数据。
+    m_filePath=QDir(QCoreApplication::applicationDirPath())
+                   .filePath(QStringLiteral("novel_data.json"));
 }
 
 //以下五个函数没有含金量

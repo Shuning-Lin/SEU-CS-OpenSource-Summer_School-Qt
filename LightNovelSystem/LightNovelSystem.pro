@@ -40,3 +40,4 @@ FORMS += \
     reportdialog.ui
 
 RESOURCES += decorations.qrc
+RC_ICONS=app.ico

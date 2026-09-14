@@ -50,8 +50,9 @@ public:
 
     bool addForbiddenWord(const QString &word, const QString &adminAccount,QString *error = nullptr);     //添加违禁词
     bool removeForbiddenWord(const QString &word,const QString &adminAccount,QString *error = nullptr);   //移除违禁词
-private:
+
     bool isAdmin(const QString &account) const;  //是否为管理员（马剃天爱星）
+private: 
     bool ensureDefaultAdmin();                   //系统有管理员吗
 
     QString m_filePath;
