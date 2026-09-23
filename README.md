@@ -1,4 +1,4 @@
-# ***SEU-CS-OpenSource***系列之$\color{red}{东南大学计算机类暑期学校Qt大作业}$————“石蕗高中轻小说系统”
+# ***SEU-CS-OpenSource***系列之 $\color{red}{东南大学计算机类暑期学校Qt大作业}$————“石蕗高中轻小说系统”
 ## 总体情况
 本系统为“石蕗高中轻小说系统”，面向校园轻小说的创作与阅读场景，本项目受到**石蕗高中学生会、希望峰学院、大肥鱼**的支持，目前更新到V2.1版本。
 ![本项目的大股东](LightNovelSystem/assets/decor/mascot_trio.png)
